@@ -7,20 +7,58 @@
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">  
         
+         <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
         <title>TivAc-main</title>
     </head>
     <body>
-<<<<<<< HEAD
-        <div class="container">
-            <h1 class="text-center">Trac your Idea Value And Collaborate</h1>
+        <div class="container-flow border bg-dark text-light p-1">
+            <h1 class="text-center">Track your Idea Value And Collaborate</h1>
             <p class="text-center">An project by Joniald Shena</p>
         </div>
-        <div>
-            <h1>Trac your Idea Value And Collaborate</h1>
-            <p>An project by Joniald Shena</p>
+
+        <div lass="container-flow ">
+              <div class="row border bg-light p-4">
+                <div class="col-2 text-center text-light rounded bg-dark">.col-4</div>
+                <div class="col-8" id="newGroupAdd">
+                    
+                </div>
+                <div class="col-2 text-center text-light bg-dark rounded">.col-4</div>
+                <div class="col-12 text-center">
+                   <span>
+                    <button class="btn btn-outline-secondary btn-center" type="button" id="buttonRemove">-</button>
+                    <button class="btn btn-outline-secondary btn-center" type="button" id="buttonAdd">+</button>
+                   </span> 
+                </div>
+              </div>
         </div>
-=======
-        
->>>>>>> parent of 28c19db (h1 slogan added)
     </body>
+
+    <script>
+        $(document).ready(function(){
+
+            $("#buttonRemove").click(function(){
+            $("#newGroupAdd div:last-child").remove();
+            });
+            
+            $("#buttonAdd").click(function(){
+            $("#newGroupAdd").append("<div class='input-group mb-3'>"
+                                         +"<button class='btn btn-outline-secondary dropdown-toggle' type='button' data-toggle='dropdown' >Dropdown</button>"  
+                                         +"<ul class='dropdown-menu'>"
+                                             +"<li><a class='dropdown-item' href='#'></a>Action</a></li>"
+                                             +"<li><a class='dropdown-item' href='#'></a>Action</a></li>"
+                                             +"<li><a class='dropdown-item' href='#'></a>Action</a></li>"
+                                
+                                         +"</ul>"
+                                         +"<input type='text' class='form-control' aria-describedby='button-addon2'>"
+                                         +"<button class='btn btn-outline-secondary' type='button' id='button-addon2'>Button</button>"
+                                    +"</div>");
+          });
+        
+        
+           
+
+        });
+    </script>
 </html>
