@@ -13,6 +13,46 @@
         <title>toDoThings</title>
     </head>
     <body>
-    
-    </body>  
+
+        <div lass="container-flow ">
+            <div class="row border bg-light p-4">
+              <div class="col-2 text-center text-light rounded bg-dark">.col-4</div>
+              <div class="col-8" id="newGroupAdd">
+                  
+              </div>
+              <div class="col-2 text-center text-light bg-dark rounded">.col-4</div>
+              <div class="col-12 text-center">
+                 <span>
+                  <button class="btn btn-outline-secondary btn-center" type="button" id="buttonRemove">-</button>
+                  <button class="btn btn-outline-secondary btn-center" type="button" id="buttonAdd">+</button>
+                 </span> 
+              </div>
+            </div>
+      </div>
+
+    </body> 
+
+    <script>
+        $(document).ready(function(){
+
+            $("#buttonRemove").click(function(){
+            $("#newGroupAdd div:last-child").fadeOut(500,function(){ $(this).remove();});
+            });
+            
+            $("#buttonAdd").click(function(){
+            $("#newGroupAdd").append("<div class='mb-3'>"
+                                    +"<label for='exampleFormControlTextarea1' class='form-label'>To do thinks:</label>"
+                                    +"<textarea class='form-control' id='exampleFormControlTextarea1' rows='3'></textarea>"
+                                    +"<br>"
+                                    +"<button class='btn btn-outline-secondary btn-right' type='button'>Add text</button>"
+                                    +"</div>");
+
+            });
+        
+        
+           
+
+        });
+    </script>
+
 </html>
