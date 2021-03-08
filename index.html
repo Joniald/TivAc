@@ -39,11 +39,15 @@
         $(document).ready(function(){
 
             $("#buttonRemove").click(function(){
-            $("#newGroupAdd div:last-child").remove();
+            //$("#newGroupAdd div:last-child").remove();
+            $("#newGroupAdd div:last-child").fadeOut(500,function(){ $(this).remove();});
             });
             
             $("#buttonAdd").click(function(){
             $("#newGroupAdd").append("<div class='input-group mb-3'>"
+                                         +"<button type='button' class='btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split' data-bs-toggle='dropdown' aria-expanded='false'>"
+                                             +"<span class='visually-hidden'>Toggle Dropdown</span>"
+                                         +"</button>"
                                          +"<button class='btn btn-outline-secondary dropdown-toggle' type='button' data-toggle='dropdown' >Dropdown</button>"  
                                          +"<ul class='dropdown-menu'>"
                                              +"<li><a class='dropdown-item' href='#'></a>Action</a></li>"
@@ -54,7 +58,7 @@
                                          +"<input type='text' class='form-control' aria-describedby='button-addon2'>"
                                          +"<button class='btn btn-outline-secondary' type='button' id='button-addon2'>Button</button>"
                                     +"</div>");
-          });
+            });
         
         
            
